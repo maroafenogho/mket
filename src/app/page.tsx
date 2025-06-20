@@ -1,3 +1,4 @@
+import AppRouter from '@/utils/app_router';
 import Link from 'next/link';
 import { FaTicketAlt } from 'react-icons/fa';
 const HomePage = () => {
@@ -8,10 +9,10 @@ const HomePage = () => {
       <p>Quick, Simple and Reliable ticketing system</p>
 
       <div className="flex flex-col md:flex-row gap-4 justify-center py-8 animate-slide opacity-0">
-        <Link href='/tickets/new'
+        <Link href={AppRouter.newTicket}
           className='bg-teal-600 text-white px-6 py-3 rounded shadow hovering-teal-500 transition disabled:opacity-50'>Create Ticket</Link>
 
-        <Link href='/tickets/new'
+        <Link href={AppRouter.tickets}
           className='bg-gray-300 text-black px-6 py-3 rounded shadow hovering-teal-700 transition'>View Tickets</Link>
       </div>
 
