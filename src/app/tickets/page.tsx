@@ -1,4 +1,3 @@
-// 'use client'
 
 import { getTickets } from "@/actions/tickets.actions";
 import AppRouter from "@/utils/app_router";
@@ -23,7 +22,7 @@ const TicketsPage = async () => {
             <div className="max-w-4xl mx-auto  rounded-lg p-8 gb-teal-300">
                 <h1 className="text-2xl font-bold text-center mb-6 text-teal-600">Support Tickets</h1>
                 {tickets.map(ticket => (
-                    <div key={ticket.id} className="flex justify-between items-center text-gray-700 mb-2  p-5 shadow-sm p-2 rounded bg-gray-50 hover:bg-gray-100 transition">
+                    <div key={ticket.id} className="flex justify-between items-center text-gray-700 mb-2  p-5 shadow-sm p-2 rounded bg-gray-50 transition">
                         <div className="flex flex-col">
                             <h2 className="text-xl font-semibold text-teal-600">
                                 {ticket.subject}
