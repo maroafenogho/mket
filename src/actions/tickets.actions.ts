@@ -43,3 +43,15 @@ export async function getTickets() {
         return [];
     }
 }
+
+export async function getTicketById(id: number) {
+    try {
+        const ticket = await prisma.ticket.findUnique({
+            where: { id },
+        });
+        return ticket;
+    } catch (error) {
+        console.error(`Error fetching ticket with ID ${id}:`, error);
+        return null;
+    }
+}

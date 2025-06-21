@@ -1,6 +1,6 @@
 import { TicketStatus } from "@/generated/prisma"
 
-export interface TicketRequestDto {
+export type TicketRequestDto = {
     subject: string,
     description: string,
     priority: string
